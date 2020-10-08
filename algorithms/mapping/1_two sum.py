@@ -5,3 +5,6 @@ class Solution:
             if target - item in hashmap:
                 return [hashmap[target - item], index]
             hashmap[item] = index
+
+if __name__ == '__main__':
+    pass
