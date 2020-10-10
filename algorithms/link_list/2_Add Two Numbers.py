@@ -24,6 +24,7 @@ class Solution(object):
             l1, l2 = l2, l1
 
         p1, p2 = l1, l2
+        #more than 10
         c = 0
         while p2:
             p1.val += p2.val
@@ -36,6 +37,7 @@ class Solution(object):
             if p1.val > 9:
                 p1.val -= 10
                 c = 1
+            #c is not zero, we need add 1 more as the next node
             if not p1.next and c:
                 p1.next = ListNode(1)
                 break
