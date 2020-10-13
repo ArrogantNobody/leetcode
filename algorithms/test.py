@@ -1,12 +1,7 @@
-def tes():
-    for i in 'python':
-        if i == 'x':
-            return 12
-        elif i == 'l':
-            return 13
-        else:
-            return len('python')
+import numpy as np
 
-print(tes())
-
-
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+for i in range(len(matrix)):
+            for j in range(i+1, len(matrix)):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+print(matrix)
