@@ -1,5 +1,2 @@
-s = [1,2,3,4]
-for i in range(0, len(s), 2):
-    s[i], s[i+1] = s[i+1], s[i]
-
-print(s)
+l = [1,2,3,4]
+print(l[::-1])
