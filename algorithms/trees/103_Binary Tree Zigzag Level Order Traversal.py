@@ -5,11 +5,13 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
+
         if not root:
             return
         queue = [root]
         res = []
+        count = 0
         while queue:
             layer = []
             in_queue = []
@@ -22,5 +24,8 @@ class Solution:
                     in_queue.append(node.right)
             queue = in_queue
             if layer:
+                if count % 2 == 1:
+                    layer = layer[::-1]
                 res.append(layer)
+            count += 1
         return res
