@@ -1,7 +1,7 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
-        tmp = dict()
+        tmp = set()
         n = len(nums)
         nums.sort()
         for i in range(n):
@@ -11,14 +11,12 @@ class Solution:
                     target = nums[i] + nums[l] + nums[r]
                     if target == 0:
                         col = [nums[i], nums[l], nums[r]]
-                        max_num = max(col)
-                        min_num = min(col)
-                        if (max_num, min_num) not in tmp:
+                        if (nums[r], nums[i]) not in tmp:
                             res.append(col)
-                            tmp[(max_num, min_num)] = 1
+                            tmp.add((nums[r], nums[i]))
                     elif target > 0:
                         r -= 1
-                    elif target < 0:
+                    else:
                         l += 1
         return res
 
