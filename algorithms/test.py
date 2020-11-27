@@ -1,2 +1,3 @@
-dic = {'a':5 , 'b':3 , 'c': 2}
-sorted(dic,values,reverse)
+nums1 = [1,2,2,1]
+nums2 = [2,2,3]
+print(nums1[len(nums2):])
