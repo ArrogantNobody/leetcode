@@ -1,3 +1,3 @@
-nums1 = [1,2,2,1]
-nums2 = [2,2,3]
-print(nums1[len(nums2):])
+d = {'a':1,'b':2,'c':3}
+d.pop('a')
+print(d)
