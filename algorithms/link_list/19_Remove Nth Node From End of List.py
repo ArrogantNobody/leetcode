@@ -19,29 +19,3 @@ class Solution:
             p.next = ListNode(i)
             p = p.next
         return newhead
-#===================================================
-class Solution:
-    def deleteDuplicates(self, head: ListNode) -> ListNode:
-        if not head or not head.next:
-            return head
-
-        p = head
-        while head and head.next:
-            if head.val == head.next.val:
-                head.next = head.next.next
-            else:
-                head = head.next
-
-        return p
-#==========================================================
-class Solution:
-    def deleteDuplicates(self, head: ListNode) -> ListNode:
-        if not head or not head.next:
-            return head
-
-        p = head
-        while p and p.val == head.val:
-            p = p.next
-        head.next = self.deleteDuplicates(p)
-
-        return head
