@@ -1,5 +1,4 @@
-d = {'a':1,'b':2,'c':3}
-for i in range(3):
-    d.setdefault('z', 0)+1
-
-print(d)
+l = [1,2,3]
+m = [7,8,9]
+i = l + m[:-1]
+print(i)
